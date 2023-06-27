@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  height: 100svh;
+  height: 100vh;
+  font-family: fantasy;
+}
+
+.root {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cipher-item {
+  display: block;
+  width: fit-content;
+  padding: 8px 16px;
+  outline: 1px solid black;
+  border-radius: 32px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.cipher-item:hover {
+  outline: 2px solid blue;
+}
+
+.cipher-link {
+  font-size: 24px;
+  text-decoration: auto;
+}
