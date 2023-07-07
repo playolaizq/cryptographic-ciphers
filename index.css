@@ -5,6 +5,10 @@ body {
   font-family: fantasy;
 }
 
+input, span, button {
+  font-family: fantasy;
+}
+
 .root {
   height: inherit;
   display: flex;
@@ -24,10 +28,15 @@ body {
 }
 
 .cipher-item:hover {
-  outline: 2px solid blue;
+  outline: 2px solid #09f;
 }
 
 .cipher-link {
   font-size: 24px;
   text-decoration: auto;
+  color: black;
+}
+
+.cipher-link:hover {
+  color: #09f;
 }

@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  height: 100svh;
+  height: 100vh;
+  font-family: fantasy;
+}
+
+input, span, button {
+  font-family: fantasy;
+}
