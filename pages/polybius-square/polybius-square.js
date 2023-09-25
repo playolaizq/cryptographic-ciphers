@@ -10,8 +10,12 @@ window.handleEncryptSubmit = function handleEncryptSubmit(event) {
   const formValues = getFormValues(event);
 
   const encodedSentence = PolybiusSquare(formValues.alphabet).encode(formValues.sentence);
-  encodedSentenceElement.textContent = encodedSentence;
 
-  encodedSentenceContainerElement.style.color = 'black';
-  encodedSentenceElement.style.fontStyle = 'none';
+  if (encodedSentence) {
+    encodedSentenceElement.textContent = encodedSentence;
+  
+    encodedSentenceContainerElement.style.display = 'flex';
+    encodedSentenceContainerElement.style.color = '#000000';
+    encodedSentenceElement.style.fontStyle = 'none';
+  }
 }

@@ -8,63 +8,62 @@
     <title>Polybus Square | Cryptography Ciphers</title>
   </head>
   <body>
-    <header class="header">
-      <h1>Polybus Square</h1>
-      <nav>
-        <a href="../../index.html">
-          <div class="close-container">
-            <div class="leftright"></div>
-            <div class="rightleft"></div>
-          </div>
-        </a>
-      </nav>
-    </header>
-
-    <form class="form" onsubmit="handleEncryptSubmit(event)">
-      <section class="form-inner-container">
-        <div class="form-item">
-          <label class="form-label" for="sentence">Sentence</label>
-          <div class="form-input-container">
-            <input class="form-input" id="sentence" name="sentence" placeholder="Type in a sentence" />
-          </div>
+    <main class="root">
+      <div class="main-card">
+        <header class="header">
+          <h1>Polybus Square</h1>
+          <nav>
+            <a href="../../index.html">
+              <div class="close-container">
+                <div class="close-leftright"></div>
+                <div class="close-rightleft"></div>
+              </div>
+            </a>
+          </nav>
+        </header>
+        <form class="form" onsubmit="handleEncryptSubmit(event)">
+          <section class="form-inner-container">
+            <div class="form-item">
+              <label class="form-label" for="sentence">Sentence</label>
+              <div class="form-input-container">
+                <input class="form-input" id="sentence" name="sentence" placeholder="Type in a sentence" />
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="form-label" for="alphabet">Alphabet</label>
+              <div class="form-input-container">
+                <input
+                  class="form-input"
+                  id="alphabet"
+                  name="alphabet"
+                  placeholder="abcdefghijklmnopqrstuvwxyz0123456789"
+                  title="Default alphabet: abcdefghijklmnopqrstuvwxyz0123456789"
+                />
+              </div>
+            </div>
+          </section>
+          <button class="primary-button" type="submit">
+            <span> Encrypt </span>
+          </button>
+        </form>
+        <div id="encoded-sentence-container" class="encoded-sentence-container">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16ZM11 14V16H13V14H11ZM7 14V16H9V14H7ZM15 14V16H17V14H15Z"
+            ></path>
+          </svg>
+          <p id="encoded-sentence" class="encoded-sentence"></p>
         </div>
-        <div class="form-item">
-          <label class="form-label" for="alphabet">Alphabet</label>
-          <div class="form-input-container">
-            <input
-              class="form-input"
-              id="alphabet"
-              name="alphabet"
-              placeholder="abcdefghijklmnopqrstuvwxyz0123456789"
-              title="Default alphabet: abcdefghijklmnopqrstuvwxyz0123456789"
-            />
-          </div>
-        </div>
-      </section>
-      <button class="primary-button" type="submit">
-        <span> Encrypt </span>
-      </button>
-    </form>
-
-    <div id="encoded-sentence-container" class="encoded-sentence-container">
-      <svg
-        stroke="currentColor"
-        fill="currentColor"
-        stroke-width="0"
-        viewBox="0 0 24 24"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16ZM11 14V16H13V14H11ZM7 14V16H9V14H7ZM15 14V16H17V14H15Z"
-        ></path>
-      </svg>
-      <p id="encoded-sentence" class="encoded-sentence">
-        Encoded sentence
-      </p>
-    </div>
-
+      </div>
+    </main>
     <script src="./polybius-square.js" type="module"></script>
   </body>
 </html>
