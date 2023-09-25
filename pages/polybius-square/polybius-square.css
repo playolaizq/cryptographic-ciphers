@@ -38,6 +38,50 @@ input, span, button {
   gap: 24px;
 }
 
+.close-container {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.close-leftright {
+  height: 4px;
+  width: 32px;
+  position: absolute;
+  margin-top: 10px;
+  background-color: #000000;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all .3s ease-in;
+}
+
+.close-rightleft {
+  height: 4px;
+  width: 32px;
+  position: absolute;
+  margin-top: 10px;
+  background-color: #000000;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all .3s ease-in;
+}
+
+.close {
+  margin: 60px 0 0 5px;
+  position: absolute;
+}
+
+.close-container:hover .close-leftright {
+  transform: rotate(-45deg);
+  background-color: #A56A11;
+}
+
+.close-container:hover .close-rightleft {
+  transform: rotate(45deg);
+  background-color: #A56A11;
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -136,48 +180,4 @@ input, span, button {
   margin: 0;
   font-style: italic;
   height: 36px;
-}
-
-.close-container {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
-
-.close-leftright {
-  height: 4px;
-  width: 32px;
-  position: absolute;
-  margin-top: 10px;
-  background-color: #000000;
-  border-radius: 2px;
-  transform: rotate(45deg);
-  transition: all .3s ease-in;
-}
-
-.close-rightleft {
-  height: 4px;
-  width: 32px;
-  position: absolute;
-  margin-top: 10px;
-  background-color: #000000;
-  border-radius: 2px;
-  transform: rotate(-45deg);
-  transition: all .3s ease-in;
-}
-
-.close {
-  margin: 60px 0 0 5px;
-  position: absolute;
-}
-
-.close-container:hover .close-leftright {
-  transform: rotate(-45deg);
-  background-color: #A56A11;
-}
-
-.close-container:hover .close-rightleft {
-  transform: rotate(45deg);
-  background-color: #A56A11;
 }
