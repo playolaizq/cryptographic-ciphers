@@ -10,6 +10,6 @@
   "author": "playolaizq",
   "license": "ISC",
   "devDependencies": {
-    "vite": "^4.4.2"
+    "vite": "^4.4.9"
   }
 }
