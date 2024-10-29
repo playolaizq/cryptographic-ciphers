@@ -22,7 +22,7 @@ On the following example, we have a "Cipher Page" which contains a form and load
       </form>
     </main>
     <script type="module">
-      import { loadButton } from '../../components/button/button.js';
+      import { loadButton } from '../../components/button/button';
       loadButton('cipher-form-button', 'cipher-form');
     </script>
   </body>

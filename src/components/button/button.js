@@ -1,4 +1,4 @@
-import { loadCSS, loadHTML } from '../../utils/dom';
+import { loadCSS, loadHTML } from '../../utils/dom.js';
 
 export function loadButton(containerId, formId) {
   loadCSS('/src/components/button/button.css');
