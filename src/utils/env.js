@@ -8,5 +8,9 @@ const envConfig = {
 };
 
 export function env() {
-  return import.meta.env.MODE == 'development' ? envConfig.dev : envConfig.production;
+  if (import.meta?.env?.MODE == 'development') {
+    return envConfig.dev;
+  }
+
+  return envConfig.production;
 }
