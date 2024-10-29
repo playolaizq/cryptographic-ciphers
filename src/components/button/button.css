@@ -1,0 +1,38 @@
+.primary-button {
+  width: 100%;
+  border: none;
+  background-image: linear-gradient(
+    150deg,
+    #593703,
+    #A56A11,
+    #ECCD9F
+  );
+  border-radius: 8px;
+  color: var(--color-black);
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 4px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.primary-button span {
+  width: 100%;
+  background: #fff1dc;
+  padding: 8px 24px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover span {
+  background: none;
+}
+
+.primary-button:hover {
+  color: var(--color-white);
+}
+
+.primary-button:active {
+  transform: scale(0.9);
+}

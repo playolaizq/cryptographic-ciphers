@@ -1,0 +1,57 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  height: 100svh;
+  height: 100vh;
+  font-family: fantasy;
+  background-color: #EEE8DE;
+}
+
+input, span, button {
+  font-family: fantasy;
+}
+
+h1 {
+  font-size: 2em;
+}
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.root {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+@media (min-width: 600px) {
+  .main-card {
+    width: calc(100% - 164px);
+    height: calc(100vh - 164px);
+    border: 6px solid var(--color-black);
+    border-radius: 24px;
+    padding: 32px;
+    background-image: url("/src/assets/numbers-background.png");
+    background-position: center;
+  }
+}

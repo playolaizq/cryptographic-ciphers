@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../../assets/logo.png" />
+    <link rel="icon" type="image/png" href="/src/assets/logo.png" />
+    <link rel="stylesheet" href="/globals.css">
     <link rel="stylesheet" href="./polybius-square.css" />
     <title>Polybus Square | Cryptography Ciphers</title>
   </head>
@@ -13,7 +14,7 @@
         <header class="header">
           <h1>Polybus Square</h1>
           <nav>
-            <a href="../../index.html">
+            <a href="/index.html">
               <div class="close-container">
                 <div class="close-leftright"></div>
                 <div class="close-rightleft"></div>
@@ -21,30 +22,26 @@
             </a>
           </nav>
         </header>
-        <form class="form" onsubmit="handleEncryptSubmit(event)">
-          <section class="form-inner-container">
-            <div class="form-item">
-              <label class="form-label" for="sentence">Sentence</label>
-              <div class="form-input-container">
-                <input class="form-input" id="sentence" name="sentence" placeholder="Type in a sentence" />
-              </div>
+        <form class="form" id="polybius-form">
+          <div class="form-item">
+            <label class="form-label" for="sentence">Sentence</label>
+            <div class="form-input-container">
+              <input class="form-input" id="sentence" name="sentence" placeholder="Type in a sentence" />
             </div>
-            <div class="form-item">
-              <label class="form-label" for="alphabet">Alphabet</label>
-              <div class="form-input-container">
-                <input
-                  class="form-input"
-                  id="alphabet"
-                  name="alphabet"
-                  placeholder="abcdefghijklmnopqrstuvwxyz0123456789"
-                  title="Default alphabet: abcdefghijklmnopqrstuvwxyz0123456789"
-                />
-              </div>
+          </div>
+          <div class="form-item">
+            <label class="form-label" for="alphabet">Alphabet</label>
+            <div class="form-input-container">
+              <input
+                class="form-input"
+                id="alphabet"
+                name="alphabet"
+                placeholder="abcdefghijklmnopqrstuvwxyz0123456789"
+                title="Default alphabet: abcdefghijklmnopqrstuvwxyz0123456789"
+              />
             </div>
-          </section>
-          <button class="primary-button" type="submit">
-            <span> Encrypt </span>
-          </button>
+          </div>
+          <div id="polybius-form-button"></div>
         </form>
         <div id="encoded-sentence-container" class="encoded-sentence-container">
           <svg
@@ -64,6 +61,10 @@
         </div>
       </div>
     </main>
+    <script type="module">
+      import { loadButton } from '../../components/button/button.js';
+      loadButton('polybius-form-button', 'polybius-form');
+    </script>
     <script src="./polybius-square.js" type="module"></script>
   </body>
 </html>
