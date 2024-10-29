@@ -10,8 +10,10 @@ function encodeAlphabet(alphabet) {
 
   for (let i = 1; i < matrixLength + 1; i++) {
     for (let j = 1; j < matrixLength + 1; j++) {
-      const char = alphabet[index];
-      encodedAlphabet.push({ char, code: String(i) + j });
+      encodedAlphabet.push({
+        char: alphabet[index],
+        code: String(i) + j
+      });
       index++;
     }
   }

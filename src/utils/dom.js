@@ -15,3 +15,12 @@ export async function loadHTML(href, callback) {
       console.error('Error loading HTML:', error);
     });
 }
+
+export function renderText({ textContainer, textElement, textValue }) {
+  if (textValue) {
+    textElement.textContent = textValue;
+    textContainer.style.display = 'flex';
+    textContainer.style.color = '#000000';
+    textElement.style.fontStyle = 'none';
+  }
+}

@@ -1,3 +1,4 @@
+import { renderText } from '../../utils/dom.js';
 import { getFormValues } from '../../utils/form.js';
 import { PolybiusSquare } from './utils/cipher.js';
 
@@ -11,12 +12,11 @@ function handleEncryptSubmit(event) {
 
   const encodedSentence = PolybiusSquare(alphabet).encode(sentence);
 
-  if (encodedSentence) {
-    encodedSentenceElement.textContent = encodedSentence;
-    encodedSentenceContainerElement.style.display = 'flex';
-    encodedSentenceContainerElement.style.color = '#000000';
-    encodedSentenceElement.style.fontStyle = 'none';
-  }
+  renderText({
+    textContainer: encodedSentenceContainerElement,
+    textElement: encodedSentenceElement,
+    textValue: encodedSentence
+  });
 }
 
 document.getElementById('polybius-form').addEventListener('submit', handleEncryptSubmit);
