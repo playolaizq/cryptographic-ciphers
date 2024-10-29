@@ -7,12 +7,12 @@ body {
   margin: 0;
   height: 100svh;
   height: 100vh;
-  font-family: fantasy;
+  font-family: monospace;
   background-color: #EEE8DE;
 }
 
 input, span, button {
-  font-family: fantasy;
+  font-family: monospace;
 }
 
 h1 {
