@@ -51,7 +51,7 @@ ul {
     border: 6px solid var(--color-black);
     border-radius: 24px;
     padding: 32px;
-    background-image: url("/src/assets/numbers-background.png");
+    background-image: url("./src/assets/numbers-background.png");
     background-position: center;
   }
 }
